@@ -33,10 +33,15 @@ $aluno = new Usuario("aluno", "@lun0");
 $aluno->insert();
 */
 
+/* alterar usuario
 $usuario = new Usuario();
 $usuario->loadbyId(8);
 $usuario->update("jovemap", "zaqwsx");
+*/
 
+$usuario = new Usuario();
+$usuario->loadbyId(9);
+$usuario->delete();
 echo $usuario;
 
 ?>
