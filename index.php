@@ -1,6 +1,15 @@
 <?php
 
 require_once("config.php");
+
+/*
+$sql = new Sql();
+
+$usuarios = $sql->select("SELECT * FROM tb_usuarios");
+
+echo json_encode($usuarios);
+*/
+
 //carrega um usuario
 //$root = new Usuario();
 //$root->loadbyId(5);
@@ -16,18 +25,18 @@ require_once("config.php");
 
 
 //carrega user usando logine senha
-$usuario = new Usuario();
-$usuario->login("user","");
-echo $usuario;
+//$usuario = new Usuario();
+//$usuario->login("user","");
+/* criando um novo usuario
+$aluno = new Usuario("aluno", "@lun0");
 
-/*
-$sql = new Sql();
-
-$usuarios = $sql->select("SELECT * FROM tb_usuarios");
-
-echo json_encode($usuarios);
+$aluno->insert();
 */
 
+$usuario = new Usuario();
+$usuario->loadbyId(8);
+$usuario->update("jovemap", "zaqwsx");
 
+echo $usuario;
 
 ?>
